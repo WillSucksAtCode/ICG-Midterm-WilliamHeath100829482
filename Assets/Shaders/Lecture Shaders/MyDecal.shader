@@ -29,7 +29,7 @@ Shader "Custom/MyDecal"
             fixed4 a = tex2D (_MainTex, IN.uv_MainTex);
             //fixed4 b = tex2D (_DecalTex, IN.uv_MainTex);
             fixed4 b = tex2D (_DecalTex, IN.uv_MainTex) * _ShowDecal;
-            o.Albedo = b.r > 0.5 ? b.rgb : a.rgb;
+            o.Albedo = b.r > 0.9 ? b.rgb : a.rgb;
         }
         ENDCG
     }
